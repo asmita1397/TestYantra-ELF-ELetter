@@ -282,11 +282,13 @@ export class MailComponent extends Component {
     toggle = () => {
         this.setState({
             modal: !this.state.modal,
-            showTos: false,
-            showFrom: false,
-            showSubject: false,
-            showContent: false,
-            showAttach: false
+           /*  showTos:'',
+            showFrom: '',
+            showSubject: '',
+            showContent:'',
+            showAttach: '',
+            item:'',
+            item2:'' */
         });
     }
     onChangeHandler = (event) => {
@@ -357,7 +359,12 @@ export class MailComponent extends Component {
         e.preventDefault()
         console.log(this.state.items);
         console.log(this.state.items2);
-        console.log(this.state.items2.push(localStorage.getItem('email')))
+
+
+        if(!this.state.items2.includes(localStorage.getItem('email'))){
+            this.state.items2.push(localStorage.getItem('email'))
+        }
+        //console.log()
         console.log(this.state.items2)
         if (this.validate() == true) {
             debugger;

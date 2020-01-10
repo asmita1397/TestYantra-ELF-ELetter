@@ -326,7 +326,7 @@ export class InputOffer2Letter extends Component {
                                                     }} />
                                                 </div>
                                                 <div className="col-6">
-                                                    <MDBInput autocomplete="off" value={this.state.age} label="Age" type="text" name="age" id="age" title="Age" onChange={(event) => {
+                                                    <MDBInput autocomplete="off" value={this.state.age} label="Age" type="number" name="age" id="age" title="Age" onChange={(event) => {
                                                         this.setState({
                                                             age: event.target.value
                                                         }); this.hideAge()

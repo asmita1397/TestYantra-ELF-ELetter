@@ -16,32 +16,30 @@ export class MailComponent extends Component {
         // Default mailid for HR
         let value;
         console.log(window.location.href)
-        let url =window.location.href
-        if(url.endsWith("hrLetter"))
-        {
-            value="hr@testyantra.com"
+        let url = window.location.href
+        if (url.endsWith("hrLetter")) {
+            value = "hr@testyantra.com"
         }
-        else
-       {
-        value=localStorage.getItem("email")
-       }
+        else {
+            value = localStorage.getItem("email")
+        }
 
-       //
-       
+        //
+
         this.state = {
-            from: value,
+            from:value,
             content: '',
             subject: '',
             attachment: null,
             modal: false,
-            checkMail:false,
+            checkMail: false,
             //checkHR:false,
 
             items: [],
             value: "",
             error: null,
 
-            
+
             items2: [],
             value2: "",
             error2: null,
@@ -56,20 +54,18 @@ export class MailComponent extends Component {
         }
     }
 
-   
+
     // Default content for HR mail
-  componentDidMount()
-  {
-   
-    let valueEmail=this.state.from;
-    if(valueEmail==="hr@testyantra.com")
-    {
-        this.setState({
-            checkMail: true
-         } )
+    componentDidMount() {
+
+        let valueEmail = this.state.from;
+        if (valueEmail === "hr@testyantra.com") {
+            this.setState({
+                checkMail: true
+            })
+        }
     }
-  }
-//
+    //
 
     fileName = () => {
         document.querySelector('.custom-file-input').addEventListener('change', function (e) {
@@ -205,11 +201,11 @@ export class MailComponent extends Component {
                 });
             }
         }
- 
+
     };
 
     handleChange2 = evt => {
-        
+
         this.setState({
             value2: evt.target.value,
             error2: null
@@ -315,7 +311,7 @@ export class MailComponent extends Component {
         let tosArray = this.state.items
         let ccsArray = this.state.items2
 
-        console.log("tos",tosArray, "    ","cc", ccsArray)
+        console.log("tos", tosArray, "    ", "cc", ccsArray)
 
 
         if (!attachment) {
@@ -377,7 +373,7 @@ export class MailComponent extends Component {
             console.log("state", this.state)
             console.log("file", this.state.attachment)
 
-            
+
 
             const headers = {
                 'Content-Type': 'application/json',
@@ -401,7 +397,7 @@ export class MailComponent extends Component {
                     if (response.data.statusCode === 201) {
                         alert("suceess")
                         this.setState({ items: [], items2: [] })
-                        this.setState({value:""})
+                        this.setState({ value: "" })
                         this.toggle()
                     } else if (response.data.statusCode === 401) {
                     }
@@ -481,7 +477,7 @@ export class MailComponent extends Component {
                                             <input value={this.state.from} id="from" type="email" class="input" placeholder="From" onChange={(event) => {
                                                 this.setState({
                                                     from: event.target.value
-                                                }); this.hideFrom() 
+                                                }); this.hideFrom()
                                             }} disabled />
                                         </div>
                                     </div>
@@ -546,17 +542,17 @@ export class MailComponent extends Component {
                                         {this.state.error2 && <p className="error">{this.state.error2}</p>}
 
                                         {this.state.items2.map(item => (
-                                                <div className="tag-item" key={item}>
-                                                    {item}
-                                                    <button
-                                                        type="button"
-                                                        className="button"
-                                                        onClick={() => this.handleDelete2(item)}
-                                                    >
-                                                        &times;
+                                            <div className="tag-item" key={item}>
+                                                {item}
+                                                <button
+                                                    type="button"
+                                                    className="button"
+                                                    onClick={() => this.handleDelete2(item)}
+                                                >
+                                                    &times;
             </button>
-                                                </div>
-                                            ))}
+                                            </div>
+                                        ))}
 
 
 
@@ -602,13 +598,21 @@ export class MailComponent extends Component {
                                         <div className="col-10">
                                             <textarea id="content" placeholder="Content"
                                                 class="input" style={{ height: 100 }}
- value={this.state.checkMail?"HR Default content":this.state.content}
+                                                value={this.state.content}
                                                 rows="5" onChange={(event) => {
-                                                    this.setState({
-                                                        content: event.target.value
-                                                    }); this.hideContent()
-                                                }}
+                                                    if (this.state.checkMail) {
+                                                        this.setState({
+                                                            content: "HR Default content"
+                                                        });
+                                                    } else {
+                                                        this.setState({
+                                                            content: event.target.value
+                                                        });} /* this.hideContent() */
+                                                    }
+                                                }
+
                                             />
+                                            {console.log(this.state.content)}
                                         </div>
                                     </div>
                                 </div>

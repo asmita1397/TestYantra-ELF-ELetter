@@ -22,9 +22,15 @@ export class RelivingLetter extends Component {
   }
 
   componentDidMount() {
-    ;
+    
+    let emp=this.props.empData
+   
+    
+    if( this.props.empData!==""&& typeof(this.props.empData.salute)==="undefined"){
+     emp.salute="Mr."
+    }
     this.setState({
-      employee: this.props.empData,
+      employee: emp,
     })
     console.log("DDDDDDDDDDDDDDDDDDd", this.props.empData)
     console.log("data hr form  state ", this.state.employee);

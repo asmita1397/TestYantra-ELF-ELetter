@@ -248,7 +248,7 @@ export class InputRelivingLetter extends Component {
                                                         })
                                                     }}>
 
-                                                        <option selected value="Mr.">Mr.</option>
+                                                        <option value="Mr."  selected>Mr.</option>
                                                         <option value="Ms.">Ms.</option>
                                                         <option value="Mrs.">Mrs.</option>
                                                     </select>

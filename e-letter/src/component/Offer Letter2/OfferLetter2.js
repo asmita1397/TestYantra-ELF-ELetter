@@ -20,8 +20,14 @@ export class Offer2 extends Component {
 
     componentDidMount() {
 
+        let emp=this.props.empData
+   
+    
+        if( this.props.empData!==""&& typeof(this.props.empData.salute)==="undefined"){
+         emp.salute="S/o"
+        }
         this.setState({
-            employee: this.props.empData,
+          employee: emp,
         })
     }
 

@@ -211,7 +211,7 @@ export class ExitLetter extends Component {
                                                     <p style={{ paddingLeft: 10 }}>Gratuity</p>
                                                 </td>
                                                 <td style={{ width: '400px', textAlign: 'left' }}>
-                                                    <p style={{ paddingLeft: 10 }}>NA</p>
+                                                    <p style={{ paddingLeft: 10 }}>{this.state.employee.gratuity}</p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -219,7 +219,7 @@ export class ExitLetter extends Component {
                                                     <p style={{ paddingLeft: 10 }}>Provident Fund Dues</p>
                                                 </td>
                                                 <td style={{ width: '400px', textAlign: 'left' }}>
-                                                    <p style={{ paddingLeft: 10 }}>PF contribution till {toExitDate.getDate()}<sup>{this.nth(toExitDate.getDate())}</sup>&nbsp;{moment(toExitDate).format('MMMM YYYY')}</p>
+                                                    <p style={{ paddingLeft: 10 }}>{this.state.employee.fundDue}{/* PF contribution till {toExitDate.getDate()}<sup>{this.nth(toExitDate.getDate())}</sup>&nbsp;{moment(toExitDate).format('MMMM YYYY')} */}</p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -227,7 +227,7 @@ export class ExitLetter extends Component {
                                                     <p style={{ paddingLeft: 10 }}>Salary deduction in respect of notice period to have been served by the Exiting Employee</p>
                                                 </td>
                                                 <td style={{ width: '400px', textAlign: 'left' }}>
-                                                    <p style={{ paddingLeft: 10 }}>(-) NIL</p>
+                                                    <p style={{ paddingLeft: 10 }}>{this.state.employee.salaryDeduction}</p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -235,7 +235,7 @@ export class ExitLetter extends Component {
                                                     <p style={{ paddingLeft: 10 }}>Deduction in respect of TDS</p>
                                                 </td>
                                                 <td style={{ width: '400px', textAlign: 'left' }}>
-                                                    <p style={{ paddingLeft: 10 }}>(-) NIL</p>
+                                                    <p style={{ paddingLeft: 10 }}>{this.state.employee.deductionTDS}</p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -243,7 +243,7 @@ export class ExitLetter extends Component {
                                                     <p style={{ paddingLeft: 10 }}>Salary</p>
                                                 </td>
                                                 <td style={{ width: '400px', textAlign: 'left' }}>
-                                                    <p style={{ paddingLeft: 10 }}>Till {toExitDate.getDate()}<sup>{this.nth(toExitDate.getDate())}</sup>&nbsp;{moment(toExitDate).format('MMMM YYYY')}</p>
+                                                    <p style={{ paddingLeft: 10 }}>{this.state.employee.salary}{/* Till {toExitDate.getDate()}<sup>{this.nth(toExitDate.getDate())}</sup>&nbsp;{moment(toExitDate).format('MMMM YYYY')} */}</p>
                                                 </td>
                                             </tr>
                                         </tbody>

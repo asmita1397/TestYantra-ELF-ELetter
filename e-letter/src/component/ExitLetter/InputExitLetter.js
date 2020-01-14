@@ -18,6 +18,12 @@ export class InputExitLetter extends Component {
             exitDate: '',
             date: '',
             location: '',
+
+            salaryDeduction: 'NA',
+            deductionTDS: 'NA',
+            salary: 'NA',
+            gratuity: 'NA',
+            fundDue: 'NA',
             withWaterMark: false,
             withHeader: false,
             gender: {
@@ -32,6 +38,11 @@ export class InputExitLetter extends Component {
             showExitDate: '',
             showCompanyLocation: '',
             showinvalidDate: '',
+            showSalaryDeduction: '',
+            showDeductionTDS: '',
+            showSalary: '',
+            showGratuity: '',
+            showFundDue: '',
             showJoinInvalid: ''
         }
     }
@@ -50,6 +61,12 @@ export class InputExitLetter extends Component {
                 joiningDate: this.props.empData.joiningDate,
                 exitDate: this.props.empData.exitDate,
                 location: this.props.empData.location,
+                salaryDeduction: this.props.empData.salaryDeduction,
+                deductionTDS: this.props.empData.deductionTDS,
+                salary: this.props.empData.salary,
+                gratuity: this.props.empData.gratuity,
+                fundDue: this.props.empData.fundDue,
+              
             })
 
         }
@@ -96,10 +113,18 @@ export class InputExitLetter extends Component {
                 let companyLocation = (document.getElementById("companyLocation").value).trim();
                 let ExitDate = (document.getElementById("exitDate").value).trim();
                 let JoiningDate = (document.getElementById("joiningDate").value).trim();
+                /* let salaryDeduction = (document.getElementById("salaryDeduction").value).trim();
+                let deductionTDS = (document.getElementById("deductionTDS").value).trim();
+                let salary = (document.getElementById("salary").value).trim();
+                let gratuity = (document.getElementById("gratuity").value).trim();
+                let fundDue = (document.getElementById("fundDue").value).trim(); */
+                
+                
                 let selectedJoiningDate = new Date(JoiningDate);
                 let selectedExitDate = new Date(ExitDate)
                 let now = new Date();
 
+                
                 if (designation === "") {
                     this.setState({ showDesignation: true })
                 }
@@ -117,6 +142,22 @@ export class InputExitLetter extends Component {
                     this.setState({ showJoiningDate: true })
                 }
 
+               /*  if (salaryDeduction === "") {
+                    this.setState({ showSalaryDeduction: true })
+                }
+                if (deductionTDS === "") {
+                    this.setState({ showDeductionTDS: true })
+                }
+                 if (salary === "") {
+                    this.setState({ showSalary: true })
+                }
+                 if (gratuity === "") {
+                    this.setState({ showGratuity: true })
+                }
+                 if (fundDue === "") {
+                    this.setState({ showFundDue: true })
+                } */
+                
                 if (selectedJoiningDate > now) {
                     this.setState({ showJoinInvalid: true })
                     return false;
@@ -127,8 +168,9 @@ export class InputExitLetter extends Component {
                         showinvalidDate: true
                     })
                     return false;
+                    
                 }
-                if (designation != "" && companyLocation != "" && employeeName != "" && ExitDate != "" && JoiningDate != '') {
+                if (/* salaryDeduction!== "" &&  deductionTDS!== "" &&  gratuity!== "" &&  fundDue!== "" &&  salary!== "" && */  designation  !== "" && companyLocation !== "" && employeeName !== "" && ExitDate !== "" && JoiningDate !== '') {
                  
                     return true;
                 }
@@ -143,7 +185,7 @@ export class InputExitLetter extends Component {
         debugger;
 
       
-        if (event.target.value == 'false') {
+        if (event.target.value === 'false') {
             this.setState({
                 withWaterMark: true
             })
@@ -164,7 +206,7 @@ export class InputExitLetter extends Component {
        
 
       
-        if (event.target.value == 'false') {
+        if (event.target.value === 'false') {
             this.setState({
                 withHeader: true
             })
@@ -183,11 +225,39 @@ export class InputExitLetter extends Component {
     }
 
 
+    hideSalaryDeduction = () => {
+        this.setState({
+            showSalaryDeduction: false
+        })
+    }
+    hideDeductionTDS = () => {
+        this.setState({
+            showDeductionTDS: false
+        })
+    }
+    hideSalary = () => {
+        this.setState({
+            showSalary: false
+        })
+    }
+    hideGratuity = () => {
+        this.setState({
+            showGratuity: false
+        })
+    }
+    hideFoundDue = () => {
+        this.setState({
+            showFundDue: false
+        })
+    }
+    
+    
     hideEmployeeName = () => {
         this.setState({
             showEmployeeName: false
         })
     }
+
     hideExitDate = () => {
         this.setState({
             showExitDate: false
@@ -223,7 +293,7 @@ export class InputExitLetter extends Component {
 
     pass = (event) => {
         event.preventDefault();
-       
+       console.log("=========",this.state.salaryDeduction)
         this.props.clicked(this.state)
         this.props.history.push('/ExitLetter')
 
@@ -332,6 +402,78 @@ export class InputExitLetter extends Component {
                                                 </div>
                                             </div>
 
+
+                                           { /* new row*/}
+                                           
+                                            
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <MDBInput autocomplete="off" value={this.state.salaryDeduction} onKeyPress={this.hideSalaryDeduction} label="Salary Deduction" type="text" name="salaryDeduction" id="salaryDeduction" title="salaryDeduction" onChange={(event) => {
+                                                        this.setState({
+                                                            salaryDeduction: event.target.value
+                                                        })
+                                                    }} />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <MDBInput autocomplete="off" value={this.state.deductionTDS} onKeyPress={this.hideDeductionTDS} label="Deduction TDS" className="w-100" name="deductionTDS" title="deductionTDS" id="deductionTDS" onChange={(event) => {
+                                                        this.setState({
+                                                            deductionTDS: event.target.value
+                                                        })
+                                                    }} />
+                                                </div>
+                                            </div>
+                                            <div className="row" style={{ padding: 0 }}>
+                                                <div className="col-6 p-0" >
+                                                    {this.state.showSalaryDeduction ? <div id="errordiv" className="container-fluid">Please fill out Salary Deduction field * </div> : null}
+                                                </div>
+                                                <div className="col-6 p-0" style={{ width: 0 }}>
+                                                    {this.state.showDeductionTDS ? <div id="errordiv" className="container-fluid">Please fill out Deduction TDS field * </div> : null}
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <MDBInput autocomplete="off" value={this.state.salary} onKeyPress={this.hideSalary} label="Salary" type="text" name="salary" id="salary" title="salary" onChange={(event) => {
+                                                        this.setState({
+                                                            salary: event.target.value
+                                                        })
+                                                    }} />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <MDBInput autocomplete="off" value={this.state.fundDue} onKeyPress={this.hideFoundDue} label="Fund Due" className="w-100" name="fundDue" title="fundDue" id="fundDue" onChange={(event) => {
+                                                        this.setState({
+                                                            fundDue: event.target.value
+                                                        })
+                                                    }} />
+                                                </div>
+                                            </div>
+                                            <div className="row" style={{ padding: 0 }}>
+                                                <div className="col-6 p-0" >
+                                                    {this.state.showSalary ? <div id="errordiv" className="container-fluid">Please fill out Salary field * </div> : null}
+                                                </div>
+                                                <div className="col-6 p-0" style={{ width: 0 }}>
+                                                    {this.state.showFundDue ? <div id="errordiv" className="container-fluid">Please fill out Fund Due field * </div> : null}
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <MDBInput autocomplete="off" value={this.state.gratuity} onKeyPress={this.hideGratuity} label="Gratuity" type="text" name="gratuity" id="gratuity" title="gratuity" onChange={(event) => {
+                                                        this.setState({
+                                                            gratuity: event.target.value
+                                                        })
+                                                    }} />
+                                                </div>
+                                                
+                                            </div>
+                                            <div className="row" style={{ padding: 0 }}>
+                                                <div className="col-12 p-0" >
+                                                    {this.state.showGratuity ? <div id="errordiv" className="container-fluid">Please fill out Gratuity field * </div> : null}
+                                                </div>
+                                               
+                                            </div> 
                                             
 
 

@@ -24,6 +24,12 @@ export class ExitLetter extends Component {
     
         if( this.props.empData!=="" &&typeof(this.props.empData.salute)==="undefined"){
          emp.salute="Mr."
+         emp.salaryDeduction="NA"
+         emp.deductionTDS="NA"
+         emp.salary="NA"
+         emp.gratuity="NA"
+         emp.fundDue="NA"
+        
         }
         this.setState({
           employee: emp,

@@ -866,9 +866,9 @@ export class Offer2 extends Component {
                                 <div style={{ paddingLeft: 60 }}>
                                     
                                         <p style={{ paddingLeft: 40 }}>In the case of notices to the Company :</p>
-                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Address&nbsp; &nbsp; &nbsp; &nbsp;:&nbsp; &nbsp;50, Brigade MLR, Vani Vilas Road, Basavanagudi, Bangalore 560004</p>
-                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attention&nbsp; &nbsp; &nbsp; :&nbsp; &nbsp;HR Department</p>
-                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-mail&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp; &nbsp;hr@testyantra.com</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; &nbsp;50, Brigade MLR, Vani Vilas Road, Basavanagudi, Bangalore 560004</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attention&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;HR Department</p>
+                                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;hr@testyantra.com</p>
                                     
 
                                 </div>
@@ -886,7 +886,7 @@ export class Offer2 extends Component {
                                 <br />
                                 <br />
                                 <br />
-                                <div><strong className="western" style={{ float: 'left', width: 400, fontSize: 'medium', textAlign: 'left' }}>_________________________________</strong><strong style={{ float: 'right', width: 300, fontSize: 'medium' }}>_______________________________</strong></div>
+                                <div><strong className="western" style={{ float: 'left', width: 400, fontSize: 'medium', textAlign: 'left' }}>_________________________________</strong><strong style={{ float: 'right', width: 320, fontSize: 'medium' }}>________________________________________</strong></div>
                                 <br />
                                 <br />
                                 <div>

@@ -52,7 +52,7 @@ export class App extends Component{
           }
 
           employee = (data) => {
-            console.log("==============",data)
+        
             this.setState({
               emp :data
             })
@@ -62,7 +62,7 @@ export class App extends Component{
              
             this.setState({
               show:data
-            },()=>{console.log("watermark",this.state.show)})
+            })
              
           }
         

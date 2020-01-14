@@ -55,13 +55,13 @@ export class Offer2 extends Component {
 
 
         let SysDate = new Date();
-        console.log("System Date", SysDate)
+      
         if (this.props.empData == 0) {
             this.props.history.push("/cards")
         }
         let toOfferValidity = new Date(this.state.employee.offerValidity);
 
-        console.log("wawda")
+      
         return (
             <div id="qwerty">
                 <Home buttonShow={true} showWatermark={(data) => this.setState({ waterMark: data })} sendData={() => this.sendData()} />

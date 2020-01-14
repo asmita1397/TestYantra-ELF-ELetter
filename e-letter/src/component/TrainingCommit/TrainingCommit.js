@@ -36,17 +36,13 @@ class TrainingCommit extends Component {
 
     mediaQueryList.addListener(function (mql) {
       if (mql.matches) {
-        console.log('before print dialog open');
       } else {
-        console.log('after print dialog closed');
         that.setState({
           pix: false
         })
       }
     });
 
-    // console.log("data hr form ",this.props.history.location.state.employee);
-    console.log("data hr form  state ", this.state.employee);
 
   }
 
@@ -63,7 +59,6 @@ class TrainingCommit extends Component {
 
   print = (data) => {
     ;
-    console.log("pix value ", this.state.pix)
     if (this.state.employee.withHeader) {
       this.setState({
         pix: true

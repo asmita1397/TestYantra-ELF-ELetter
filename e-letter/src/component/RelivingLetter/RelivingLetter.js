@@ -32,17 +32,13 @@ export class RelivingLetter extends Component {
     this.setState({
       employee: emp,
     })
-    console.log("DDDDDDDDDDDDDDDDDDd", this.props.empData)
-    console.log("data hr form  state ", this.state.employee);
 
     let that = this;
     var mediaQueryList = window.matchMedia('print');
 
     mediaQueryList.addListener(function (mql) {
       if (mql.matches) {
-        console.log('before print dialog open');
       } else {
-        console.log('after print dialog closed');
         that.setState({
           pix: false
         })

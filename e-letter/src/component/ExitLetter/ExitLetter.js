@@ -449,7 +449,7 @@ export class ExitLetter extends Component {
 
                                     <div>
                                         <p className="western" style={{ float: 'left', width: 500 }} ><strong>Test Yantra Software Solutions (India) Pvt Ltd. &nbsp;&nbsp;&nbsp;</strong> represented by its authorised signatory</p>
-                                        <p className="western" style={{ float: 'left', width: 300 }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Exiting Employee</strong></p></div>
+                                        <p className="western" style={{ float: 'left', width: 300 }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Exiting Employee</strong></p></div>
                                     <p className="western">&nbsp;</p>
                                     <p className="western">&nbsp;</p>
                                     <p className="western">&nbsp;</p>

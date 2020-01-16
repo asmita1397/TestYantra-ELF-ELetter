@@ -72,7 +72,7 @@ export class App extends Component{
   return (
 
     <div className="App">
-
+   <switch>
       <Route exact path='/' component={Login}></Route>
 
       <Route exact path='/cards' component={Cards}></Route>
@@ -126,7 +126,10 @@ export class App extends Component{
      <Route exact path='/email' component={MailComponent}></Route>
 
       <Route exact path='/test' component={Temp}></Route>
-
+     
+  
+    {/*  <Route path='/*' render={(props)=>{return this.props.history.push('/')}} ></Route> */}
+     </switch>
      
     </div>
   );

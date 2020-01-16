@@ -179,12 +179,12 @@ export class Offer2 extends Component {
                                 </div>
                                     : null}
                                 <div><p />
-                                    <h4 className="western" align="CENTER"><strong>Schedule</strong></h4>
-                                    <p className="western" align="CENTER">Cost to Company details</p>
+                                   {/*  <h4 className="western" align="CENTER"><strong>Schedule</strong></h4>
+                                    <p className="western" align="CENTER">Cost to Company details</p> */}
                                 </div>
 
 
-                                <div><table style={{ width: 800, marginLeft: 'auto', marginRight: 'auto', height: 250, fontFamily: 'sans-serif' }} border="1px">
+                                <div>{/* <table style={{ width: 800, marginLeft: 'auto', marginRight: 'auto', height: 250, fontFamily: 'sans-serif' }} border="1px">
                                     <tbody>
                                         <tr style={{ height: 32 }}>
                                             <td style={{ textAlign: 'center', width: '423.5px' }} colSpan={2}>
@@ -208,7 +208,7 @@ export class Offer2 extends Component {
                                             <td style={{ textAlign: 'left', width: '300px', wordBreak: 'break-all', fontFamily: 'sans-serif', fontSize: 'large' }}>&nbsp;Test Yantra Software Solutions </td>
                                         </tr>
                                     </tbody>
-                                </table>
+                                </table> */}
                                     {/*  <table style={{ width: 800, height: 450, marginLeft: 'auto', marginRight: 'auto', fontFamily: 'sans-serif' }} border="1px">
                                     <tbody>
                                         <tr style={{}}>
@@ -320,9 +320,9 @@ export class Offer2 extends Component {
                                         </tr>
                                     </tbody>
                                 </table> */}
-                                    <br />
+                                   {/*  <br />
                                     <p style={{ textAlign: 'justify', paddingLeft: 10, paddingRight: 10 }}>Note: Take home Salary is subject to Income Tax deduction as per Section 192B of Income tax act, 1961.You can avail tax reduction, by declaring your Investments to HR team at the time of Joining the Company.</p>
-                                    <br />
+                                    <br /> */}
 
 
                                     <p style={{ textAlign: 'center' }}><strong>SALARY COMPENSATION AND BENEFITS</strong></p>
@@ -342,7 +342,16 @@ export class Offer2 extends Component {
                                     <br />
                                     <p style={{ textAlign: 'justify' }}><strong>NON - STATUTORY BENEFITS</strong></p>
                                     <p style={{ textAlign: 'justify' }}>The company provides the following benefits to all or sections of employees based on certain employment, performance criteria and career bands. They are meant to provide additional benefits to employees, act as a motivator in their career and to take care of their life style requirements. The award of these benefits are solely under the discretion of the management.</p>
-
+                                    <br />
+                                <p style={{ textAlign: 'justify' }}>The following is the list of Non Statutory Benefits:</p>
+                                <ol>
+                                    <li style={{ textAlign: 'justify' }}>Group Insurance Scheme (Accident and Death)</li>
+                                    <li style={{ textAlign: 'justify' }}>Group Health Insurance Scheme (Hospitalization)</li>
+                                    <li style={{ textAlign: 'justify' }}>Sabbatical Leave</li>
+                                    <li style={{ textAlign: 'justify' }}>Extended Maternity Leave</li>
+                                    <li style={{ textAlign: 'justify' }}>Food Allowance</li>
+                                    <li style={{ textAlign: 'justify' }}>Leave Travel Concession</li>
+                                </ol>
 
                                 </div>
                             </div>
@@ -384,16 +393,7 @@ export class Offer2 extends Component {
                                 : null}
 
                             <div>
-                                <br />
-                                <p style={{ textAlign: 'justify' }}>The following is the list of Non Statutory Benefits:</p>
-                                <ol>
-                                    <li style={{ textAlign: 'justify' }}>Group Insurance Scheme (Accident and Death)</li>
-                                    <li style={{ textAlign: 'justify' }}>Group Health Insurance Scheme (Hospitalization)</li>
-                                    <li style={{ textAlign: 'justify' }}>Sabbatical Leave</li>
-                                    <li style={{ textAlign: 'justify' }}>Extended Maternity Leave</li>
-                                    <li style={{ textAlign: 'justify' }}>Food Allowance</li>
-                                    <li style={{ textAlign: 'justify' }}>Leave Travel Concession</li>
-                                </ol>
+                                
                                 <br />
                                 <br />
                                 <p style={{ textAlign: 'center' }}><u>Annexure 1</u></p>
@@ -649,6 +649,7 @@ export class Offer2 extends Component {
 
                                 <ol className="order">
                                     <li style={{ textAlign: 'justify' }}><span className="orderspan">5.1</span> The Employee agrees that information concerning the working of the Company, including all the information concerning the Company’s business transactions, financial arrangements, business partners, clientele, trade secrets, marketing strategies and any other information concerning the Company which is not in the public domain constitutes ‘Confidential Information’ belonging to the Company under this Agreement and he shall not, during the continuance of this Agreement or for a period of two (2) years after the termination of this Agreement, reveal Confidential Information to any person, firm, corporation, or entity. Should the Employee reveal or threaten to reveal such Confidential Information to any person, firm, corporation, or entity contrary to the provisions of this Agreement during the subsistence of this Agreement, the Company shall be entitled to take disciplinary action against the Employee including dismissal of the Employee and the Company may file suit for damages. Should the Employee reveal or threaten to reveal such Confidential Information to any person, firm, corporation, or entity contrary to the provisions of this Agreement after termination of this Agreement but within 2 year from the date termination of this Agreement, the Company shall be entitled to claim damages from the Employee.</li>
+                               
                                 </ol>
                             </div>
                             {this.state.waterMark ? <div className="footerimg" >
@@ -690,7 +691,7 @@ export class Offer2 extends Component {
                                 <br />
                                 <br />
                                 <ol className="order">
-
+                                <p style={{ textAlign: 'justify' }}><strong>Non-Compete:</strong> For a period of Two (2) Years flowing the termination of this Agreement in any manner whatsoever, the employee is prohibited from   establishing of conducting alone or with other persons whether gratuitously or for remuneration, any business in India which competes with same clients for the same business with the Company.</p>
                                     <li style={{ textAlign: 'justify' }}><span className="orderspan">5.2</span> Nothing contained in the previous/ above clause shall apply to:</li>
 
                                     <br />

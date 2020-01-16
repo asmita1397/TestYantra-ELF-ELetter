@@ -118,7 +118,7 @@ export default class Cards extends Component {
                             <img style={{ width: '120px', marginLeft: 'auto', marginRight: 'auto', }} src={offerletter2} className="card-img-top" alt="..." />
                             <div style={{ color: '#343A40' }}><h6 className="font-weight-bold">Offer Letter</h6></div>
                         </div></Link>
-
+                        
                 </div>
             </div>
         );

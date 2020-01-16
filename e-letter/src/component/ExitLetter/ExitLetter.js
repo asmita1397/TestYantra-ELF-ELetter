@@ -146,7 +146,7 @@ export class ExitLetter extends Component {
                                     <div>&nbsp;</div>
                                     <p style={{ paddingLeft: 30, textAlign: 'justify' }}><strong>Date of Exit </strong></p>
 
-                                    <ol style={{ textAlign: 'justify' }} type='a'>
+                                    <ol style={{ textAlign: 'justify',paddingLeft: 60 }} type='a'>
                                         <li style={{ textAlign: 'justify', }}>The Company hereby accepts the resignation of the Exiting Employee with effect from {toExitDate.getDate()}<sup>{this.nth(toExitDate.getDate())}</sup>&nbsp;{moment(toExitDate).format('MMMM YYYY')} and the Exiting Employee agrees that {this.props.empData.gender.gender2} last working day with the Company shall be {toExitDate.getDate()}<sup>{this.nth(toExitDate.getDate())}</sup>&nbsp;{moment(toExitDate).format('MMMM YYYY')}.</li>
                                     </ol>
                                     <p style={{ textAlign: 'justify' }}>&nbsp;</p>
